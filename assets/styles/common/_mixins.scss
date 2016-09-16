@@ -1,0 +1,54 @@
+@mixin inline-block($valign: top) {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: $valign;
+}
+
+@mixin no-select() {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@mixin box-shadow($val){
+  -webkit-box-shadow: $val;
+  box-shadow: $val;
+}
+
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+
+@mixin transition($val) {
+  -webkit-transition: $val;
+  transition: $val;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
